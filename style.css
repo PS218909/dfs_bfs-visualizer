@@ -1,0 +1,56 @@
+.board {
+    border: 3px solid black;
+    width: min-content;
+}
+
+.row-square {
+    display: flex;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    background-color: #ff0606;
+}
+
+.initial {
+    background-color: rgb(107, 81, 160)!important;
+}
+
+select, button {
+    margin-bottom: 5px;
+    background-color: white;
+    color: black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+button:active {
+    background-color: black;
+    color: white;
+}
+
+.visited {
+    background-color: rgb(255, 249, 89);
+    transition: 0.5s;
+}
+
+.neighbour {
+    background-color: rgb(106, 255, 76);
+    transition: 0.8s;
+}
+
+.path {
+    background-color: coral;
+}
