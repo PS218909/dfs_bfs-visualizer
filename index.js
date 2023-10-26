@@ -251,7 +251,7 @@ button.onclick = () => {
         }
         array.push(temp);
     }
-    find_solution(array, e);
+    find_solution(array);
 }
 
 button = document.getElementById('reset');
