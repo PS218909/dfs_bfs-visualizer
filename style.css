@@ -1,3 +1,16 @@
+body {
+    display: flex;
+}
+
+.right * {
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.right {
+    margin-left: 20px;
+}
+
 .board {
     border: 3px solid black;
     width: min-content;
@@ -23,7 +36,7 @@
 }
 
 .initial {
-    background-color: rgb(107, 81, 160)!important;
+    background-color: #6b51a0!important;
 }
 
 select, button {
@@ -42,12 +55,12 @@ button:active {
 }
 
 .visited {
-    background-color: rgb(255, 249, 89);
+    background-color: #fff959;
     transition: 0.5s;
 }
 
 .neighbour {
-    background-color: rgb(106, 255, 76);
+    background-color: #6aff4c;
     transition: 0.8s;
 }
 

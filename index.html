@@ -7,18 +7,33 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="board" id="board">
-
+    <div class="left">
+        <div class="board" id="board">
+    
+        </div>
+        <br />
+        <select id="algorithm">
+            <option value="DFS">DFS</option>
+            <option value="BFS">BFS</option>
+        </select>
+        <br />
+        <button type="button" id="solution">Find Path</button>
+        <br />
+        <button id="reset">Reset</button>
     </div>
-    <br />
-    <select id="algorithm">
-        <option value="DFS">DFS</option>
-        <option value="BFS">BFS</option>
-    </select>
-    <br />
-    <button type="button" id="solution">Find Path</button>
-    <br />
-    <button id="reset">Reset</button>
+    <div class="right">
+        <h1>Instruction</h1>
+        <ul>
+            <li style="color: #ff0606;list-style-type: square;"><p style="color: black;">Blocked Square will be red in color.</p></li>
+            <li style="color: #6b51a0;list-style-type: square;"><p style="color: black;">Start and End Square will be Purple in color.</p></li>
+            <li style="color: #fff959;list-style-type: square;"><p style="color: black;">Visited Square will be Yellow in color.</p></li>
+            <li style="color: #6aff4c;list-style-type: square;"><p style="color: black;">Neighbouring Square will be in Green in color.</p></li>
+            <li style="color: coral  ;list-style-type: square;"><p style="color: black;">Path between Start ans End point will be Orange in color with number representing the route.</p></li>
+        </ul>
+        <h1>How to use</h1>
+        <h3>Double Click: Toggle square as Start Point and End Point</h3>
+        <h3>Single Click: Toggle square as block/empty</h3>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

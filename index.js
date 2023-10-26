@@ -155,14 +155,15 @@ function DFS(array, visited, queue, goal, initial, parent = {}, direction = 1) {
         let out = find_neighbours_dfs(array, v[0], v[1], visited, direction);
         let neighbours = out[0];
         direction = out[1];
-        if (queue.length > 81) {
-            return alert('Something Went Wrong')
-        }
         for (let i = 0;i<neighbours.length;i++) {
             parent[neighbours[i]] = v;
             document.getElementsByClassName('square')[(neighbours[i][0]*square_count) + neighbours[i][1]].classList.add('neighbour');
             queue = [neighbours[i], ...queue];
         }
+        console.log(queue[0][0], queue[0][1]);
+    }
+    if (queue.length === 0) {
+        return alert("No Possible Path Found");
     }
     setTimeout(DFS, 200, array, visited, queue, goal, initial, parent, direction);
 }
@@ -250,7 +251,7 @@ button.onclick = () => {
         }
         array.push(temp);
     }
-    find_solution(array);
+    find_solution(array, e);
 }
 
 button = document.getElementById('reset');
